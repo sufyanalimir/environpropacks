@@ -1,0 +1,439 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
+
+:root {
+  --primary: #386fa4;
+  --light: #d6d6d6;
+  --dark: #1d1818;
+  --dark-50: #919191;
+  --success: #38a460;
+  --danger: #a43838;
+  --warning: #d5c623;
+  --white: #fff;
+  --trigger-mobile: 400px;
+}
+
+* {
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2vmin;
+}
+
+.logo {
+  position: fixed;
+  top: 0;
+  margin: 1.2em;
+}
+
+/* Navbar */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 1.3em;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  margin-top: 0.5em;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  background-color: #386fa4;
+  color: #f1f1f1;
+  padding: 0.3em;
+  margin-top: 1.5em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  font-size: 0.9em;
+  z-index: 999;
+}
+
+.sidenav .social{
+  position: absolute;
+  bottom: 1em;
+}
+
+.sidenav .social li{
+  list-style: none;
+  transition: all .5s ease;
+}
+
+.sidenav .social li:hover{
+  -webkit-transform: translateY(-0.5rem);
+  transform: translateY(-0.5rem) ;
+}
+
+.menu-button {
+  background-color: #000;
+  color: #f1f1f1;
+  padding: 0.3em;
+  margin-top: 1.5em;
+  position: fixed;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  font-size: 0.9em;
+  /* z-index: 2; */
+}
+
+/* Navbar End */
+
+/* Banner Image */
+.main-content {
+  width: 100%;
+  height: 80vh;
+  background-image: url(../img/banner/rolls.png);
+  background-size: cover;
+  animation: slider 12s infinite ease-in-out;
+}
+
+@keyframes slider {
+  0% {
+    background-image: url(../img/banner/rolls.png);
+  }
+  25% {
+    background-image: url(../img/banner/rollss.png);
+  }
+  50% {
+    background-image: url(../img/banner/machine.png);
+  }
+  75% {
+    background-image: url(../img/banner/factory.png);
+  }
+}
+
+.title {
+  position: absolute;
+  top: 30%;
+  left: 47%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.title img {
+  width: 60vmin;
+}
+
+/* Banner Image End */
+
+/* Usp Section */
+.dotted {
+  /* background: linear-gradient(90deg, #f2f2f2 21px, transparent 1%) center,
+    linear-gradient(#f2f2f2 21px, transparent 1%) center, var(--primary); */
+  background-size: 22px 22px;
+  padding: 1vmin;
+  position: relative;
+  z-index: -1;
+}
+
+.dotted span {
+  font-size: 1.2em;
+  color: var(--primary);
+}
+
+.heading {
+  text-align: center;
+  font-size: 1.7em;
+}
+
+p.based-para {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 1.5em;
+  margin: 1em;
+  letter-spacing: 0.08em;
+  line-height: 1.5em;
+  text-align: left;
+}
+
+.usp {
+  display: -ms-grid;
+  display: grid;
+  gap: 1vmin;
+  -ms-grid-columns: (minmax(190px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.usp li {
+  min-width: 10ch;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row-align: center;
+  align-self: center;
+  padding: 5vmin;
+  -ms-grid-columns: 60px 1fr;
+  grid-template-columns: 60px 1fr;
+}
+
+.usp li img {
+  min-height: 40px;
+  max-width: 40px;
+  margin: 0 0.1vmin 0 0;
+}
+
+.usp li h4 {
+  font-weight: bolder;
+  text-transform: capitalize;
+  max-width: 20ch;
+}
+
+.usp li p {
+  max-width: 22ch;
+  text-align: left;
+}
+
+.usp li p small {
+  font-weight: bold;
+  color: var(--dark-50);
+}
+
+.usp li p small::first-letter {
+  text-transform: capitalize;
+}
+
+/* Usp section end */
+
+/* products section */
+
+.heading-products {
+  text-align: center;
+  font-size: 1.7em;
+  padding: 0.7em;
+}
+
+.heading-products span {
+  font-size: 1.2em;
+  color: var(--primary);
+}
+
+.card-container {
+  width: 100%;
+  
+}
+
+.card-container .card {
+  display: flex;
+  padding: 1.5em;
+  margin: 3em 0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  font-family: "Lato" sans-serif;
+  text-align: center;
+  transition: all 0.6s ease-in-out;
+}
+
+.card-container img {
+  width: 350px !important;
+  height: 200px;
+}
+
+.card-container p {
+  text-align: left;
+  padding: 1em;
+  color: grey;
+}
+
+.card-container h1 {
+  color: var(--primary);
+  font-size: 1.3em;
+  padding: 0.5em;
+  font-style: italic;
+}
+
+.card-container .btn {
+  font-size: 0.7em;
+  color: #fff;
+  background: var(--primary);
+  display: inline-block;
+  padding: 0.9em 2em;
+  margin-top: 3em;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1.2px;
+  border: 1px solid var(--primary);
+  transition: 0.5s;
+}
+
+.card-container .btn:hover{
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  background: var(--white);
+}
+
+/* Products end */
+
+/* Branding */
+
+.branding {
+  height: 15vmin;
+  background-image: url(../img/texture.png);
+  background-color: var(--primary);
+  background-blend-mode: hard-light;
+  /* border-bottom: 2px dashed grey; */
+}
+
+.branding h2 {
+  text-align: center;
+  padding: 0.6em;
+  font-size: 4vmin;
+  font-weight: 300;
+  color: var(--dark);
+}
+
+.branding h2 span {
+  font-size: 1.5em;
+}
+
+/* Branding End */
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 2em;
+  padding: 2em;
+}
+
+.footer-content p {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 1em 0;
+}
+
+.footer-content li {
+  padding: 0.1em 0;
+  list-style: none;
+  line-height: 2em;
+}
+
+.footer-content li a {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.5s ease;
+}
+
+.footer-content li a:hover{
+  color: var(--primary);
+}
+
+.footer-content i {
+  width: 1em;
+  margin-right: 0.6em;
+}
+
+environ-propacks-logo[data-logo-type=""] {
+  margin: 2rem;
+  display: inline-block;
+  width: 100px;
+}
+
+.credits{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-top: 1px solid grey;
+  padding: 1em;
+}
+
+.credits p{
+  font-size: 0.9em;
+}
+
+.credits a{
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.credits i{
+  color: red;
+}
+
+
+/* Responsive */
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-content {
+    height: 60vh;
+  }
+
+  .usp{
+    display: block;
+  }
+
+  .credits p{
+    padding: 0.1em;
+    margin: 0.1em;
+  }
+
+  .card-container img {
+    width: 300px !important;
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 632px){
+  .card-container .card{
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-content {
+    height: 70vh;
+  }
+
+  p.based-para {
+    font-size: 1em;
+  }
+  .footer-content{
+    display: block;
+    margin: 0;
+  }
+}

@@ -1,0 +1,48 @@
+.contact{
+    margin-top: 3em;
+}
+
+.contact h2{
+    text-align: center;
+    margin: 1em;
+}
+
+.contact-details ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+}
+.contact-details a{
+    text-decoration: none;
+    color: #000;
+    transition: all .5s ease;
+}
+
+.contact-details a:hover{
+    color: var(--primary);
+}
+
+.contact li{
+    list-style: none;
+    padding: 1em;
+}
+
+.contact li p{
+    font-size: 1em;
+}
+
+.contact li p i{
+    padding: 0.5em 0;
+    font-size: 1.3em;
+}
+
+.map-wrapper{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.googlemap{
+    width: 100%;
+}
